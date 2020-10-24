@@ -1,7 +1,660 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <head>
+        <style>
+
+            h3 {
+                margin: 0;
+                margin-top: 12px;
+            }
+            ul {
+                margin: 0;
+            }
+
+            /* CSS for the main interaction */
+            .tabset > input[type="radio"] {
+                position: absolute;
+                left: -200vw;
+            }
+
+            .tabset .tab-panel {
+                display: none;
+            }
+
+            .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+            .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+            .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+            .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+            .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+            .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+                display: block;
+            }
+            /* Styling */
+            body {
+                font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+                color: #333;
+                font-weight: 300;
+            }
+
+            .tabset > label {
+                position: relative;
+                display: inline-block;
+                padding: 15px 15px 25px;
+                border: 1px solid transparent;
+                border-bottom: 0;
+                cursor: pointer;
+                font-weight: 600;
+            }
+
+            .tabset > label::after {
+                content: "";
+                position: absolute;
+                left: 15px;
+                bottom: 10px;
+                width: 22px;
+                height: 4px;
+                background: #8d8d8d;
+            }
+
+            .tabset > label:hover,
+            .tabset > input:focus + label {
+                color: #06c;
+            }
+
+            .tabset > label:hover::after,
+            .tabset > input:focus + label::after,
+            .tabset > input:checked + label::after {
+                background: #06c;
+            }
+
+            .tabset > input:checked + label {
+                border-color: #ccc;
+                border-bottom: 1px solid #fff;
+                margin-bottom: -1px;
+            }
+
+            .tab-panel {
+                padding: 30px 0;
+                border-top: 1px solid #ccc;
+            }
+
+            /* styles collapsible container */
+            body {
+                color: #2c3e50;
+                background: #ecf0f1;
+                padding: 0 1em 1em;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1 {
+                margin: 0;
+                line-height: 2;
+                text-align: center;
+            }
+            h2 {
+                margin: 0 0 0.5em;
+                font-weight: normal;
+            }
+            input {
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+            }
+            .row {
+                display: flex;
+            }
+            .row .col {
+                flex: 1;
+            }
+            .row .col:last-child {
+                margin-left: 1em;
+            }
+            /* Accordion styles */
+            .tabs {
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+            }
+            .tab {
+                width: 100%;
+                color: white;
+                overflow: hidden;
+            }
+            .tab-label {
+                display: flex;
+                justify-content: space-between;
+                padding: 1em;
+                background: #2c3e50;
+                font-weight: bold;
+                cursor: pointer;
+                /* Icon */
+            }
+            .tab-label:hover {
+                background: #1a252f;
+            }
+            .tab-label::after {
+                content: "\276F";
+                width: 1em;
+                height: 1em;
+                text-align: center;
+                transition: all 0.35s;
+            }
+            .tab-content {
+                max-height: 0;
+                padding: 0 1em;
+                color: #2c3e50;
+                background: white;
+                transition: all 0.35s;
+            }
+            .tab-close {
+                display: flex;
+                justify-content: flex-end;
+                padding: 1em;
+                font-size: 0.75em;
+                background: #2c3e50;
+                cursor: pointer;
+            }
+            .tab-close:hover {
+                background: #1a252f;
+            }
+            input:checked + .tab-label {
+                background: #1a252f;
+            }
+            input:checked + .tab-label::after {
+                transform: rotate(90deg);
+            }
+            input:checked ~ .tab-content {
+                max-height: 100vh;
+                padding: 1em;
+            }
+
+            .main-container {
+                max-width: 1000px;
+                margin: auto;
+            }
+            .flex-container {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+            }
+            .three-column div{
+                width: 30%;
+                min-width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+            <h1>Tiny Zoids</h1>
+            <div class="tabset">
+                <!-- Tab 1 -->
+                <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+                <label for="tab1">Helic Republic</label>
+                <!-- Tab 2 -->
+                <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+                <label for="tab2">Zenebas Empire</label>
+                <!-- Tab 3 -->
+                <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+                <label for="tab3">Dunkles Bock</label>
+                
+                <div class="tab-panels">
+                    <!-- Tab 1 -->
+                    <section id="marzen" class="tab-panel">
+                        <h2>Helic Republic</h2>
+                        <div class="tabs">
+                        <div class="tab">
+                            <input type="checkbox" id="chck1-1">
+                            <label class="tab-label" for="chck1-1">Basic</label>
+                            <div class="tab-content flex-container three-column">
+                                <div>
+                                    <h3>Guysak</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>4</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Armor Piercing Axe</li>
+                                        <li><b>Defense: </b>Cloaking</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Godos</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>4</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Plasma Cannons, Rapid Fire Lasers</li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Cannon Tortoise</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>4</li>
+                                        <li><b>Passive: </b>Immovable</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Main cannon</li>
+                                        <li><b>Defense: </b>Titanium Shield</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck1-2">
+                            <label class="tab-label" for="chck1-2">Standard</label>
+                            <div class="tab-content flex-container three-column">
+                                <div>
+                                    <h3>Command Wolf</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>Automatic Cannon, Retractable blade</li>
+                                        <li><b>Defense: </b>Cloaking</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Stealth Viper</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>4</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Rapid Fire Lasers, Swarm Missiles</li>
+                                        <li><b>Defense: </b>Cloaking</li>
+                                        <li><b>Movement: </b>Stealth engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Barigator</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Antimatter Missiles, BGS</li>
+                                        <li><b>Defense: </b>Armor Plating, Cloaking</li>
+                                        <li><b>Movement: </b>Stealth engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Gordos</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>Main cannon, Rapid Fire Lasers</li>
+                                        <li><b>Defense: </b>Reinforced Materials</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Shield Liger</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Retractable blade</li>
+                                        <li><b>Defense: </b>Armor Plating, Mining Shield, Multi-phase Shield</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck1-3">
+                            <label class="tab-label" for="chck1-3">Advanced</label>
+                            <div class="tab-content flex-container three-column">
+                                <div>
+                                    <h3>Gun Sniper</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>8</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>Automatic Cannon, Main cannon, Retractable Sword, Swarm Missiles</li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b>Stealth engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Blade Liger</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>8</li>
+                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Automatic Cannon, BGS, Retractable Blade</li>
+                                        <li><b>Defense: </b>Armor Plating, Mining Shield, Multi-phase Shield</li>
+                                        <li><b>Movement: </b>Gravity Engine</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Gojulas</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>10</li>
+                                        <li><b>Fuel: </b>8</li>
+                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Armored Piercing Axe, BGS, Plasma Cannons, Rapid Fire Lasers</li>
+                                        <li><b>Defense: </b>Reinforced Materials, Armored Plating</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Dibison</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>10</li>
+                                        <li><b>Fuel: </b>8</li>
+                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>Automatic Cannons, BGS, Main Cannon, Swarm Missiles</li>
+                                        <li><b>Defense: </b>Multi-phase Shields</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck1-4">
+                            <label class="tab-label" for="chck1-4">Experimental/Titanic</label>
+                            <div class="tab-content flex-container three-column">
+                                <div>
+                                    <h3>Liger Zero</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>10</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Armor Piercing Axe, Retractable Sword, Plasma Cannons</li>
+                                        <li><b>Defense: </b>Armored Plating</li>
+                                        <li><b>Movement: </b>Transforming<span Style="color: #900;">*</span>, Emergency Power, Fule Tanks, Gravity Engines</Span></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Shadow Fox</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>10</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b>Holographic emitter, Long-range scanners</li>
+                                        <li><b>Weapons: </b>Automatic Cannon, EMP Mines, Rapid fire lasers, Retractable Blade</li>
+                                        <li><b>Defense: </b>Cloaking</li>
+                                        <li><b>Movement: </b>Stealth engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Ultrasaurus</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>12</li>
+                                        <li><b>Fuel: </b>10</li>
+                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>Electro-fists, Main cannon, Rapid Fire Lasers, Swarm Missiles</li>
+                                        <li><b>Defense: </b>Emergency Power, Reinforced Materials, Repair Drone</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Madthunder</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>12</li>
+                                        <li><b>Fuel: </b>10</li>
+                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>BGS, Plasma Cannon, Rapid Fire Lasers</li>
+                                        <li><b>Defense: </b>Armored Plating, Multi-phase Shield, Reinforced Materials, Titanium Shield</li>
+                                        <li><b>Movement: </b>Emergency Power</li>
+                                    </ul>
+                                </div>
+                                <div></div>
+                                <div></div>
+                        </div>
+                    </section>
+                    <!-- Tab 2 -->
+                    <section id="rauchbier" class="tab-panel">
+                        <h2>Zenebas Empire</h2>
+                        <div class="tabs">
+                        <div class="tab">
+                            <input type="checkbox" id="chck2-1">
+                            <label class="tab-label" for="chck2-1">Basic</label>
+                            <div class="tab-content flex-container three-column">
+                                <div>
+                                    <h3>Gator</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>4</li>
+                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>sensors: </b>Jamming Array, Long-range Scanners</li>
+                                        <li><b>Weapons: </b></li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b>Fuel Tanks</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Iguan</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>4</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Automatic Cannon, Rapid Fire Lasers</li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Molga</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>4</li>
+                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Antimatter Missiles</li>
+                                        <li><b>Defense: </b>Titanium Shield</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2-2">
+                            <label class="tab-label" for="chck2-2">Standard</label>
+                            <div class="tab-content flex-container three-column">
+                                <div>
+                                    <h3>Helcat</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Automatic Cannon, Rapid Fire Lasers</li>
+                                        <li><b>Defense: </b>Cloaking</li>
+                                        <li><b>Movement: </b>Stealth engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Rev Raptor</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>4</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Armor Piercing Axe, BGS,  Retractable blade</li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b>Gravity Engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Killerdome</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>6</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>Rapid Fire Lasers, BGS</li>
+                                        <li><b>Defense: </b>Titanium Shield</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Red Horn</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>Armor Piercing Axe, Automatic Cannon, Swarm Missiles</li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Zaber Fang</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>6</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Automatic Cannon, Plasma Cannon, Rapid Fire Lasers, Retractable Sword</li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2-3">
+                            <label class="tab-label" for="chck2-3">Advanced</label>
+                            <div class="tab-content flex-container three-column">
+                                <div>
+                                    <h3>Dark Spiner</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>8</li>
+                                        <li><b>Passive: </b></li>
+                                        <li><b>sensors: </b>Interior Scanner, Holographic Emitters, Jamming Array</li>
+                                        <li><b>Weapons: </b>Automatic Cannon, Retractable Sword</li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b>Stealth Engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Geno Saurer</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>8</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Charged Cannon, Plasma Cannon, Retractable Sword</li>
+                                        <li><b>Defense: </b>Mining Shields</li>
+                                        <li><b>Movement: </b>Fuel Tanks, Gravity Engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Iron Kong</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>10</li>
+                                        <li><b>Fuel: </b>8</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>Antimatter Missiles, Electro-fists, Swarm Missiles</li>
+                                        <li><b>Defense: </b>Armored Plating, Mining Shields</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Elephander</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>10</li>
+                                        <li><b>Fuel: </b>8</li>
+                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>sensors: </b>Long-range Scanners</li>
+                                        <li><b>Weapons: </b>BGS, Electro-fists, Plasma Cannons, Rapid Fire Lasers, Swarm Missiles</li>
+                                        <li><b>Defense: </b>Multi-phase Shielding</li>
+                                        <li><b>Movement: </b></li>
+                                    </ul>
+                                </div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" id="chck2-4">
+                            <label class="tab-label" for="chck2-4">Experimental/Titanic</label>
+                            <div class="tab-content flex-container three-column">
+                                <div>
+                                    <h3>Lightning Saix</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>10</li>
+                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Armor Piercing Axe, Automatic Cannon, Rapid fire lasers, Retractable Sword</li>
+                                        <li><b>Defense: </b>Armored Plating</li>
+                                        <li><b>Movement: </b>Emergency Power, Fuel Tanks, Gravity Engines</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Geno Breaker</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Fuel: </b>10</li>
+                                        <li><b>Passive: </b></li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Charged Cannon</li>
+                                        <li><b>Defense: </b></li>
+                                        <li><b>Movement: </b>Gravity Engines, Microfusion Reactor</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Death Saurer</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>12</li>
+                                        <li><b>Fuel: </b>10</li>
+                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>BGS, Charged Cannon, Rapid Fire Lasers, Swarm Missiles</li>
+                                        <li><b>Defense: </b>Armored Plating, Reinforced Materials, Titanium Shield</li>
+                                        <li><b>Movement: </b>Fuel Tanks</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>Death Stinger</h3>
+                                    <ul>
+                                        <li><b>Strcture: </b>12</li>
+                                        <li><b>Fuel: </b>10</li>
+                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>sensors: </b></li>
+                                        <li><b>Weapons: </b>Armored Piercing Axe, BGS, Charged Cannon, Rapid Fire Lasers</li>
+                                        <li><b>Defense: </b>Armored Plating, Reinforced Materials</li>
+                                        <li><b>Movement: </b>Fuel Tanks, Power Core</li>
+                                    </ul>
+                                </div>
+                                <div></div>
+                                <div></div>
+                        </div>
+                    </section>
+                    <!-- Tab 3 -->
+                    <section id="dunkles" class="tab-panel">
+                        <h2>6C. Dunkles Bock</h2>
+                        <p><strong>Overall Impression:</strong> A dark, strong, malty German lager beer that emphasizes the malty-rich and somewhat toasty qualities of continental malts without being sweet in the finish.</p>
+                        <p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a brewing center and popular exporter in the days of the Hanseatic League (14th to 17th century). Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption of the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
