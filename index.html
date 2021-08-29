@@ -180,6 +180,14 @@
                 width: 30%;
                 min-width: 200px;
             }
+            .decrip{
+                display: none;
+                font-size: .75em;
+                transition: all .3s ease-in-out;
+            }
+            .see-more:hover .decrip{
+                display: block;
+            }
         </style>
     </head>
     <body>
@@ -212,7 +220,11 @@
                                         <li><b>Fuel: </b>4</li>
                                         <li><b>Passive: </b>Agile</li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Armor Piercing Axe</li>
+                                        <li><b>Weapons: 
+                                            <ul>
+                                                <li></b><span class="see-more">Armor Piercing Axe<span class="decrip">Wepon desctiption</span></span></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b>Cloaking</li>
                                         <li><b>Movement: </b></li>
                                     </ul>
