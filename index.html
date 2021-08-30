@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <style>
 
             h3 {
@@ -163,7 +164,7 @@
                 transform: rotate(90deg);
             }
             input:checked ~ .tab-content {
-                max-height: 100vh;
+                max-height: none;
                 padding: 1em;
             }
 
@@ -180,13 +181,25 @@
                 width: 30%;
                 min-width: 200px;
             }
+            .system:hover {
+                cursor: help;
+                text-decoration: underline;
+            }
             .decrip{
                 display: none;
                 font-size: .75em;
-                transition: all .3s ease-in-out;
+                text-decoration: none !important;
+            }
+            .decrip:hover{
+                display: block;
             }
             .see-more:hover .decrip{
                 display: block;
+            }
+
+            /* RESPONSIVE */
+            @media only screen and (max-width: 800px) {
+                
             }
         </style>
     </head>
@@ -218,14 +231,22 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
                                         <li><b>Weapons: 
                                             <ul>
-                                                <li></b><span class="see-more">Armor Piercing Axe<span class="decrip">Wepon desctiption</span></span></li>
+                                                <li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li>
                                             </ul>
                                         </li>
-                                        <li><b>Defense: </b>Cloaking</li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Cloaking</span><span class="decrip">Passive: When you Hide during combat, you Test with Advantage.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -234,9 +255,18 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Plasma Cannons, Rapid Fire Lasers</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b></li>
                                         <li><b>Movement: </b></li>
                                     </ul>
@@ -246,10 +276,22 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
-                                        <li><b>Passive: </b>Immovable</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Immovable</span><span class="decrip">Passive: No system or attack will move this zoid, unless it is from a Titanic zoid</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Main cannon</li>
-                                        <li><b>Defense: </b>Titanium Shield</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Main cannon</span><span class="decrip">Action: Make a ranged Attack, this Attack deals 2 damage. If you fire on an immobile target, this attack has Advantage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Titanium Shield</span><span class="decrip">Passive: Any attack action against you deals 1 less damage (minimum 1).</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -264,10 +306,27 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Agile</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>Automatic Cannon, Retractable blade</li>
-                                        <li><b>Defense: </b>Cloaking</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Cloaking</span><span class="decrip">Passive: When you Hide during combat, you Test with Advantage.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -276,11 +335,28 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Rapid Fire Lasers, Swarm Missiles</li>
-                                        <li><b>Defense: </b>Cloaking</li>
-                                        <li><b>Movement: </b>Stealth engines</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Cloaking</span><span class="decrip">Passive: When you Hide during combat, you Test with Advantage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Stealth engines</span><span class="decrip">Action: Spend 2 Fuel. You may Test to Hide without taking an action this turn.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -288,11 +364,29 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Adaptable</span><span class="decrip">1 extra system</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Antimatter Missiles, BGS</li>
-                                        <li><b>Defense: </b>Armor Plating, Cloaking</li>
-                                        <li><b>Movement: </b>Stealth engines</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Antimatter Missiles</span><span class="decrip">Action: Spend 2 Fuel. Make a Ranged Attack Test. If you succeed, you deal 1d6 damage to a target. (roll a d6 dice. The number showing is how much damage you deal).</span></div></li>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armor Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Cloaking</span><span class="decrip">Passive: When you Hide during combat, you Test with Advantage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Stealth engines</span><span class="decrip">Action: Spend 2 Fuel. You may Test to Hide without taking an action this turn.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -300,10 +394,27 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Adaptable</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>Main cannon, Rapid Fire Lasers</li>
-                                        <li><b>Defense: </b>Reinforced Materials</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Adaptable</span><span class="decrip">1 extra system</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Main cannon</span><span class="decrip">Action: Make a ranged Attack, this Attack deals 2 damage. If you fire on an immobile target, this attack has Advantage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Reinforced Materials</span><span class="decrip">Passive: Permanently increase your mecha’s Structure by 4.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -312,10 +423,23 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Adaptable</span><span class="decrip">1 extra system</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Retractable blade</li>
-                                        <li><b>Defense: </b>Armor Plating, Mining Shield, Multi-phase Shield</li>
+                                        <li><b>Weapons: </b>
+                                            <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                        </ul>
+                                    </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armor Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Mining Shield</span><span class="decrip">Passive: If you are attacked by a Test that makes multiple rolls, reduce the total damage taken after all rolls by 1. (Minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Multi-phase Shield</span><span class="decrip">Passive: If you are attacked by Ranged attacks, reduce the total damage by 1. (minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -331,11 +455,30 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>8</li>
-                                        <li><b>Passive: </b>Agile</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>Automatic Cannon, Main cannon, Retractable Sword, Swarm Missiles</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Main cannon</span><span class="decrip">Action: Make a ranged Attack, this Attack deals 2 damage. If you fire on an immobile target, this attack has Advantage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b></li>
-                                        <li><b>Movement: </b>Stealth engines</li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Stealth engines</span><span class="decrip">Action: Spend 2 Fuel. You may Test to Hide without taking an action this turn.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -343,10 +486,25 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>8</li>
-                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Adaptable</span><span class="decrip">1 extra system</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Automatic Cannon, BGS, Retractable Blade</li>
-                                        <li><b>Defense: </b>Armor Plating, Mining Shield, Multi-phase Shield</li>
+                                        <li><b>Weapons: </b>
+                                            <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                            <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                            <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                        </ul>
+                                    </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armor Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Mining Shield</span><span class="decrip">Passive: If you are attacked by a Test that makes multiple rolls, reduce the total damage taken after all rolls by 1. (Minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Multi-phase Shield</span><span class="decrip">Passive: If you are attacked by Ranged attacks, reduce the total damage by 1. (minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b>Gravity Engine</li>
                                     </ul>
                                 </div>
@@ -355,10 +513,26 @@
                                     <ul>
                                         <li><b>Strcture: </b>10</li>
                                         <li><b>Fuel: </b>8</li>
-                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Buffered Shielding</span><span class="decrip">When hit, the zoid may disable one system to ignore the damage. The disabled system can no longer be used until the zoid has a chance to repair.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Armored Piercing Axe, BGS, Plasma Cannons, Rapid Fire Lasers</li>
-                                        <li><b>Defense: </b>Reinforced Materials, Armored Plating</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Reinforced Materials</span><span class="decrip">Passive: Permanently increase your mecha’s Structure by 4.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -367,10 +541,29 @@
                                     <ul>
                                         <li><b>Strcture: </b>10</li>
                                         <li><b>Fuel: </b>8</li>
-                                        <li><b>Passive: </b>Buffered Shielding</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>Automatic Cannons, BGS, Main Cannon, Swarm Missiles</li>
-                                        <li><b>Defense: </b>Multi-phase Shields</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Buffered Shielding</span><span class="decrip">When hit, the zoid may disable one system to ignore the damage. The disabled system can no longer be used until the zoid has a chance to repair.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Main cannon</span><span class="decrip">Action: Make a ranged Attack, this Attack deals 2 damage. If you fire on an immobile target, this attack has Advantage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Multi-phase Shield</span><span class="decrip">Passive: If you are attacked by Ranged attacks, reduce the total damage by 1. (minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -387,11 +580,32 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>10</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Armor Piercing Axe, Retractable Sword, Plasma Cannons</li>
-                                        <li><b>Defense: </b>Armored Plating</li>
-                                        <li><b>Movement: </b>Transforming<span Style="color: #900;">*</span>, Emergency Power, Fule Tanks, Gravity Engines</Span></li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Transforming<span Style="color: #900;">*</span></span><span class="decrip">Description</span></div></li>
+                                                <li><div class="see-more"><span class="system">Emergency Power</span><span class="decrip">Passive: When you would be reduced to 0 Structure, spend 3 Fuel. You instead are reduced to 3 Structure (effectively repairing 3).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li>
+                                            </ul>
+                                        </Span></li>
                                     </ul>
                                 </div>
                                 <div>
@@ -399,11 +613,35 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>10</li>
-                                        <li><b>Passive: </b>Agile</li>
-                                        <li><b>sensors: </b>Holographic emitter, Long-range scanners</li>
-                                        <li><b>Weapons: </b>Automatic Cannon, EMP Mines, Rapid fire lasers, Retractable Blade</li>
-                                        <li><b>Defense: </b>Cloaking</li>
-                                        <li><b>Movement: </b>Stealth engines</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Holographic emitter</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">syetem</span><span class="decrip">Description</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                            </ul>
+                                        EMP Mines</li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Cloaking</span><span class="decrip">Passive: When you Hide during combat, you Test with Advantage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Stealth engines</span><span class="decrip">Action: Spend 2 Fuel. You may Test to Hide without taking an action this turn.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -411,10 +649,31 @@
                                     <ul>
                                         <li><b>Strcture: </b>12</li>
                                         <li><b>Fuel: </b>10</li>
-                                        <li><b>Passive: </b>Buffered Shielding</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>Electro-fists, Main cannon, Rapid Fire Lasers, Swarm Missiles</li>
-                                        <li><b>Defense: </b>Emergency Power, Reinforced Materials, Repair Drone</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Buffered Shielding</span><span class="decrip">When hit, the zoid may disable one system to ignore the damage. The disabled system can no longer be used until the zoid has a chance to repair.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Electro-fists</span><span class="decrip">Action: Make 2 melee attack Tests at Disadvantage. Each deals 1 damage. If both hit, you may throw the target.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Main cannon</span><span class="decrip">Action: Make a ranged Attack, this Attack deals 2 damage. If you fire on an immobile target, this attack has Advantage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Emergency Power</span><span class="decrip">Passive: When you would be reduced to 0 Structure, spend 3 Fuel. You instead are reduced to 3 Structure (effectively repairing 3).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Reinforced Materials</span><span class="decrip">Passive: Permanently increase your mecha’s Structure by 4.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Repair Drone</span><span class="decrip">Action: Spend 3 Fuel. Restore 2 Structure to either your Mecha or an adjacent Mecha.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -423,11 +682,32 @@
                                     <ul>
                                         <li><b>Strcture: </b>12</li>
                                         <li><b>Fuel: </b>10</li>
-                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Buffered Shielding</span><span class="decrip">When hit, the zoid may disable one system to ignore the damage. The disabled system can no longer be used until the zoid has a chance to repair.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>BGS, Plasma Cannon, Rapid Fire Lasers</li>
-                                        <li><b>Defense: </b>Armored Plating, Multi-phase Shield, Reinforced Materials, Titanium Shield</li>
-                                        <li><b>Movement: </b>Emergency Power</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Multi-phase Shield</span><span class="decrip">Passive: If you are attacked by Ranged attacks, reduce the total damage by 1. (minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Reinforced Materials</span><span class="decrip">Passive: Permanently increase your mecha’s Structure by 4.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Titanium Shield</span><span class="decrip">Passive: Any attack action against you deals 1 less damage (minimum 1).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Emergency Power</span><span class="decrip">Passive: When you would be reduced to 0 Structure, spend 3 Fuel. You instead are reduced to 3 Structure (effectively repairing 3).</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div></div>
@@ -447,11 +727,24 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
-                                        <li><b>Passive: </b>Adaptable</li>
-                                        <li><b>sensors: </b>Jamming Array, Long-range Scanners</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Adaptable</span><span class="decrip">1 extra system</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Jamming Array</span><span class="decrip">Passive: Spend 3 Fuel to give an opponent Disadvantage on a Test before they Test.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Weapons: </b></li>
                                         <li><b>Defense: </b></li>
-                                        <li><b>Movement: </b>Fuel Tanks</li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -459,9 +752,18 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Automatic Cannon, Rapid Fire Lasers</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b></li>
                                         <li><b>Movement: </b></li>
                                     </ul>
@@ -471,10 +773,22 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
-                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Buffered Shielding</span><span class="decrip">When hit, the zoid may disable one system to ignore the damage. The disabled system can no longer be used until the zoid has a chance to repair.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Antimatter Missiles</li>
-                                        <li><b>Defense: </b>Titanium Shield</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Antimatter Missiles</span><span class="decrip">Action: Spend 2 Fuel. Make a Ranged Attack Test. If you succeed, you deal 1d6 damage to a target. (roll a d6 dice. The number showing is how much damage you deal).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Titanium Shield</span><span class="decrip">Passive: Any attack action against you deals 1 less damage (minimum 1).</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -489,11 +803,28 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Automatic Cannon, Rapid Fire Lasers</li>
-                                        <li><b>Defense: </b>Cloaking</li>
-                                        <li><b>Movement: </b>Stealth engines</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Cloaking</span><span class="decrip">Passive: When you Hide during combat, you Test with Advantage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Stealth engines</span><span class="decrip">Action: Spend 2 Fuel. You may Test to Hide without taking an action this turn.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -501,11 +832,25 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Armor Piercing Axe, BGS,  Retractable blade</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b></li>
-                                        <li><b>Movement: </b>Gravity Engines</li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -513,10 +858,27 @@
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Buffered Shielding</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>Rapid Fire Lasers, BGS</li>
-                                        <li><b>Defense: </b>Titanium Shield</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Buffered Shielding</span><span class="decrip">When hit, the zoid may disable one system to ignore the damage. The disabled system can no longer be used until the zoid has a chance to repair.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Titanium Shield</span><span class="decrip">Passive: Any attack action against you deals 1 less damage (minimum 1).</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -525,9 +887,23 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Buffered Shielding</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>Armor Piercing Axe, Automatic Cannon, Swarm Missiles</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Buffered Shielding</span><span class="decrip">When hit, the zoid may disable one system to ignore the damage. The disabled system can no longer be used until the zoid has a chance to repair.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b></li>
                                         <li><b>Movement: </b></li>
                                     </ul>
@@ -537,9 +913,20 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>6</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Automatic Cannon, Plasma Cannon, Rapid Fire Lasers, Retractable Sword</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b></li>
                                         <li><b>Movement: </b></li>
                                     </ul>
@@ -557,10 +944,25 @@
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>8</li>
                                         <li><b>Passive: </b></li>
-                                        <li><b>sensors: </b>Interior Scanner, Holographic Emitters, Jamming Array</li>
-                                        <li><b>Weapons: </b>Automatic Cannon, Retractable Sword</li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Interior Scanner</span><span class="decrip">Action: Make a Test with Disadvantage. If you succeed, you may choose one System or Evolution and your target may not use it until your next turn.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Holographic Emitters</span><span class="decrip">Action: Make a Test. If you succeed, your next attack Test gains Advantage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Jamming Array</span><span class="decrip">Passive: Spend 3 Fuel to give an opponent Disadvantage on a Test before they Test.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b></li>
-                                        <li><b>Movement: </b>Stealth Engines</li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Stealth engines</span><span class="decrip">Action: Spend 2 Fuel. You may Test to Hide without taking an action this turn.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -568,11 +970,30 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>8</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Charged Cannon, Plasma Cannon, Retractable Sword</li>
-                                        <li><b>Defense: </b>Mining Shields</li>
-                                        <li><b>Movement: </b>Fuel Tanks, Gravity Engines</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Charged Cannon</span><span class="decrip">Action: Spend 2 Fuel. If you take no other actions this turn, you may make a ranged attack Test with Disadvantage. If you succeed, deal 6 damage to your target. This system can not benefit from the Focus Action or be used in consecutive rounds.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Mining Shield</span><span class="decrip">Passive: If you are attacked by a Test that makes multiple rolls, reduce the total damage taken after all rolls by 1. (Minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -580,10 +1001,29 @@
                                     <ul>
                                         <li><b>Strcture: </b>10</li>
                                         <li><b>Fuel: </b>8</li>
-                                        <li><b>Passive: </b>Agile</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>Antimatter Missiles, Electro-fists, Swarm Missiles</li>
-                                        <li><b>Defense: </b>Armored Plating, Mining Shields</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Antimatter Missiles</span><span class="decrip">Action: Spend 2 Fuel. Make a Ranged Attack Test. If you succeed, you deal 1d6 damage to a target. (roll a d6 dice. The number showing is how much damage you deal).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Electro-fists</span><span class="decrip">Action: Make 2 melee attack Tests at Disadvantage. Each deals 1 damage. If both hit, you may throw the target.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Mining Shield</span><span class="decrip">Passive: If you are attacked by a Test that makes multiple rolls, reduce the total damage taken after all rolls by 1. (Minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -592,10 +1032,30 @@
                                     <ul>
                                         <li><b>Strcture: </b>10</li>
                                         <li><b>Fuel: </b>8</li>
-                                        <li><b>Passive: </b>Adaptable</li>
-                                        <li><b>sensors: </b>Long-range Scanners</li>
-                                        <li><b>Weapons: </b>BGS, Electro-fists, Plasma Cannons, Rapid Fire Lasers, Swarm Missiles</li>
-                                        <li><b>Defense: </b>Multi-phase Shielding</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Adaptable</span><span class="decrip">1 extra system</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>sensors: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Long-range Scanners</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Electro-fists</span><span class="decrip">Action: Make 2 melee attack Tests at Disadvantage. Each deals 1 damage. If both hit, you may throw the target.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Multi-phase Shield</span><span class="decrip">Passive: If you are attacked by Ranged attacks, reduce the total damage by 1. (minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b></li>
                                     </ul>
                                 </div>
@@ -612,11 +1072,32 @@
                                     <ul>
                                         <li><b>Strcture: </b>8</li>
                                         <li><b>Fuel: </b>10</li>
-                                        <li><b>Passive: </b>Agile</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Armor Piercing Axe, Automatic Cannon, Rapid fire lasers, Retractable Sword</li>
-                                        <li><b>Defense: </b>Armored Plating</li>
-                                        <li><b>Movement: </b>Emergency Power, Fuel Tanks, Gravity Engines</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
+                                             </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Emergency Power</span><span class="decrip">Passive: When you would be reduced to 0 Structure, spend 3 Fuel. You instead are reduced to 3 Structure (effectively repairing 3).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -626,9 +1107,18 @@
                                         <li><b>Fuel: </b>10</li>
                                         <li><b>Passive: </b></li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Charged Cannon</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Charged Cannon</span><span class="decrip">Action: Spend 2 Fuel. If you take no other actions this turn, you may make a ranged attack Test with Disadvantage. If you succeed, deal 6 damage to your target. This system can not benefit from the Focus Action or be used in consecutive rounds.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Defense: </b></li>
-                                        <li><b>Movement: </b>Gravity Engines, Microfusion Reactor</li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li>
+                                                <li><div class="see-more"><span class="system">syetem</span><span class="decrip">Description</span></div></li>
+                                            </ul>
+                                        Microfusion Reactor</li>
                                     </ul>
                                 </div>
                                 <div>
@@ -636,11 +1126,32 @@
                                     <ul>
                                         <li><b>Strcture: </b>12</li>
                                         <li><b>Fuel: </b>10</li>
-                                        <li><b>Passive: </b>Adaptable</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Adaptable</span><span class="decrip">1 extra system</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>BGS, Charged Cannon, Rapid Fire Lasers, Swarm Missiles</li>
-                                        <li><b>Defense: </b>Armored Plating, Reinforced Materials, Titanium Shield</li>
-                                        <li><b>Movement: </b>Fuel Tanks</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Charged Cannon</span><span class="decrip">Action: Spend 2 Fuel. If you take no other actions this turn, you may make a ranged attack Test with Disadvantage. If you succeed, deal 6 damage to your target. This system can not benefit from the Focus Action or be used in consecutive rounds.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                                <li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Reinforced Materials</span><span class="decrip">Passive: Permanently increase your mecha’s Structure by 4.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Titanium Shield</span><span class="decrip">Passive: Any attack action against you deals 1 less damage (minimum 1).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -648,11 +1159,32 @@
                                     <ul>
                                         <li><b>Strcture: </b>12</li>
                                         <li><b>Fuel: </b>10</li>
-                                        <li><b>Passive: </b>Buffered Shielding</li>
+                                        <li><b>Passive: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Buffered Shielding</span><span class="decrip">When hit, the zoid may disable one system to ignore the damage. The disabled system can no longer be used until the zoid has a chance to repair.</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>Armored Piercing Axe, BGS, Charged Cannon, Rapid Fire Lasers</li>
-                                        <li><b>Defense: </b>Armored Plating, Reinforced Materials</li>
-                                        <li><b>Movement: </b>Fuel Tanks, Power Core</li>
+                                        <li><b>Weapons: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Charged Cannon</span><span class="decrip">Action: Spend 2 Fuel. If you take no other actions this turn, you may make a ranged attack Test with Disadvantage. If you succeed, deal 6 damage to your target. This system can not benefit from the Focus Action or be used in consecutive rounds.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
+                                                <li><div class="see-more"><span class="system">Reinforced Materials</span><span class="decrip">Passive: Permanently increase your mecha’s Structure by 4.</span></div></li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Movement: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Power Core</span><span class="decrip">Description</span></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div></div>
