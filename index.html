@@ -2,6 +2,61 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script>
+            function myJsFunc(x) {
+                var L0_title = document.getElementById("L0_title");
+                var L0_structure = document.getElementById("L0_structure");
+                var L0_passives = document.getElementById("L0_passives");
+                var L0_sensors = document.getElementById("L0_sensors");
+                var L0_weapons = document.getElementById("L0_weapons");
+                var L0_defense = document.getElementById("L0_defense");
+                var L0_movement = document.getElementById("L0_movement");
+                switch (x) {
+                    case 0:
+                        L0_title.innerHTML = "Liger Zero";
+                        L0_structure.innerHTML = "";
+                        L0_passives.innerHTML = '<b>Passive: </b><ul><li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li></ul>';
+                        L0_sensors.innerHTML = '<b>sensors: </b>';
+                        L0_weapons.innerHTML = '<b>Weapons: </b><ul><li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li><li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li><li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>';
+                        L0_defense.innerHTML = '<b>Defense: </b><ul><li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li></ul>';
+                        L0_movement.innerHTML = '<b>Movement: </b><ul><li><div class="see-more"><span class="system">Transforming</span><span class="decrip"><ul><li><a href="javascript:void(0)" onclick="myJsFunc(0);">Standard</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(1);">Panzer</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(2);">Jager</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(3);">Schneider</a></li></ul></span></div></li><li><div class="see-more"><span class="system">Emergency Power</span><span class="decrip">Passive: When you would be reduced to 0 Structure, spend 3 Fuel. You instead are reduced to 3 Structure (effectively repairing 3).</span></div></li><li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li><li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li></ul>';
+                        //alert(x);
+                        break;
+                    case 1:
+                        L0_title.innerHTML = 'Liger Zero - Panzer';
+                        L0_structure.innerHTML = "(12)";
+                        L0_passives.innerHTML = '<b>Passive: </b><ul><li><div class="see-more"><span class="system">Immoveable</span><span class="decrip">Passive: No system or attack will move this zoid, unless it is from a Titanic zoid.</span></div></li></ul>';
+                        L0_sensors.innerHTML = '<b>sensors: </b>';
+                        L0_weapons.innerHTML = '<b>Weapons: </b><ul><li><div class="see-more"><span class="system">Main cannon</span><span class="decrip">Action: Make a ranged Attack, this Attack deals 2 damage. If you fire on an immobile target, this attack has Advantage.</span></div></li><li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li><li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li><li><div class="see-more"><span class="system">Swarm Missiles</span><span class="decrip">Action: Make 6 ranged attack Tests at Disadvantage. If all 6 Tests succeed, deal 1 extra Damage.</span></div></li></ul>';
+                        L0_defense.innerHTML = '<b>Defense: </b><ul><li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li><li><div class="see-more"><span class="system">Reinforced Materials</span><span class="decrip">Passive: Permanently increase your mecha’s Structure by 4.</span></div></li></ul>';
+                        L0_movement.innerHTML = '<b>Movement: </b><ul><li><div class="see-more"><span class="system">Transforming</span><span class="decrip"><ul><li><a href="javascript:void(0)" onclick="myJsFunc(0);">Standard</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(1);">Panzer</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(2);">Jager</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(3);">Schneider</a></li></ul></span></div></li><li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li></ul>';
+                        //alert(x);
+                        break;
+                    case 2:
+                        L0_title.innerHTML = "Liger Zero - Jager";
+                        L0_structure.innerHTML = "";
+                        L0_passives.innerHTML = '<b>Passive: </b><ul><li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li></ul>';
+                        L0_sensors.innerHTML = '<b>sensors: </b>';
+                        L0_weapons.innerHTML = '<b>Weapons: </b><ul><li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li><li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li><li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li></ul>';
+                        L0_defense.innerHTML = '<b>Defense: </b><ul><li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li></ul>';
+                        L0_movement.innerHTML = '<b>Movement: </b><ul><li><div class="see-more"><span class="system">Transforming</span><span class="decrip"><ul><li><a href="javascript:void(0)" onclick="myJsFunc(0);">Standard</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(1);">Panzer</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(2);">Jager</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(3);">Schneider</a></li></ul></span></div></li><li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li><li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li><li><div class="see-more"><span class="system">High Speed Boosters</span><span class="decrip">Action: Spend 1 Fuel, and then move twice as a single Action.</span></div></li></ul>';
+                        //alert(x);
+                        break;
+                    case 3:
+                        L0_title.innerHTML = "Liger Zero - Schneider";
+                        L0_structure.innerHTML = "";
+                        L0_passives.innerHTML = '<b>Passive: </b><ul><li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li></ul>';
+                        L0_sensors.innerHTML = '<b>sensors: </b>';
+                        L0_weapons.innerHTML = '<b>Weapons: </b><ul><li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li><li></b><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li><li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li><li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>';
+                        L0_defense.innerHTML = '<b>Defense: </b><ul><li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li></ul>';
+                        L0_movement.innerHTML = '<b>Movement: </b><ul><li><div class="see-more"><span class="system">Transforming</span><span class="decrip"><ul><li><a href="javascript:void(0)" onclick="myJsFunc(0);">Standard</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(1);">Panzer</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(2);">Jager</a></li><li><a href="javascript:void(0)" onclick="myJsFunc(3);">Schneider</a></li></ul></span></div></li><li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li><li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li></ul>';
+                        //alert(x);
+                        break;
+                }
+                //L0.innerHTML = "Liger Zero - Panzer";
+                //alert(x);
+            }
+        </script>
         <style>
 
             h3 {
@@ -181,6 +236,14 @@
                 width: 30%;
                 min-width: 200px;
             }
+            h3>a {
+                color: #2c3e50;
+                text-decoration: none;
+                transition: all .2s ease-in-out;
+            }
+            h3>a:hover {
+                color:#466380;
+            }
             .system:hover {
                 cursor: help;
                 text-decoration: underline;
@@ -192,6 +255,13 @@
             }
             .decrip:hover{
                 display: block;
+            }
+            .decrip a {
+                color: #2c3e50;
+                transition: all .2s ease-in-out;
+            }
+            .decrip a:hover {
+                color: #466380;
             }
             .see-more:hover .decrip{
                 display: block;
@@ -233,7 +303,7 @@
                             <label class="tab-label" for="chck1-1">Basic</label>
                             <div class="tab-content flex-container three-column">
                                 <div>
-                                    <h3>Guysak</h3>
+                                    <h3><a href="https://zoids.fandom.com/wiki/Guysak" target="_blank">Guysak</a></h3>
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
@@ -257,7 +327,7 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3>Godos</h3>
+                                    <h3><a href="https://zoids.fandom.com/wiki/Godos" target="_blank">Godos</a></h3>
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
@@ -278,13 +348,13 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3>Cannon Tortoise</h3>
+                                    <h3><a href="https://zoids.fandom.com/wiki/Cannon_Tortoise" target="_blank">Cannon Tortoise</a></h3>
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>4</li>
                                         <li><b>Passive: </b>
                                             <ul>
-                                                <li><div class="see-more"><span class="system">Immovable</span><span class="decrip">Passive: No system or attack will move this zoid, unless it is from a Titanic zoid</span></div></li>
+                                                <li><div class="see-more"><span class="system">Immoveable</span><span class="decrip">Passive: No system or attack will move this zoid, unless it is from a Titanic zoid</span></div></li>
                                             </ul>
                                         </li>
                                         <li><b>sensors: </b></li>
@@ -308,7 +378,7 @@
                             <label class="tab-label" for="chck1-2">Standard</label>
                             <div class="tab-content flex-container three-column">
                                 <div>
-                                    <h3>Command Wolf</h3>
+                                    <h3><a href="https://zoids.fandom.com/wiki/Command_Wolf" target="_blank">Command Wolf</a></h3>
                                     <ul>
                                         <li><b>Strcture: </b>6</li>
                                         <li><b>Fuel: </b>6</li>
@@ -398,7 +468,7 @@
                                 <div>
                                     <h3>Gordos</h3>
                                     <ul>
-                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Strcture: </b>8(12)</li>
                                         <li><b>Fuel: </b>6</li>
                                         <li><b>Passive: </b>
                                             <ul>
@@ -523,7 +593,7 @@
                                 <div>
                                     <h3>Gojulas</h3>
                                     <ul>
-                                        <li><b>Strcture: </b>10</li>
+                                        <li><b>Strcture: </b>10(14)</li>
                                         <li><b>Fuel: </b>8</li>
                                         <li><b>Passive: </b>
                                             <ul>
@@ -588,36 +658,46 @@
                             <label class="tab-label" for="chck1-4">Experimental/Titanic</label>
                             <div class="tab-content flex-container three-column">
                                 <div>
-                                    <h3>Liger Zero</h3>
+                                    <h3 id="L0_title">Liger Zero</h3>
                                     <ul>
-                                        <li><b>Strcture: </b>8</li>
+                                        <li><b>Strcture: </b>8<span id="L0_structure"></span></li>
                                         <li><b>Fuel: </b>10</li>
-                                        <li><b>Passive: </b>
+                                        <li id="L0_passives"><b>Passive: </b>
                                             <ul>
                                                 <li><div class="see-more"><span class="system">Agile</span><span class="decrip">Passive: For every Ranged attack, roll a Dodge test at diadvantage</span></div></li>
                                             </ul>
                                         </li>
-                                        <li><b>sensors: </b></li>
-                                        <li><b>Weapons: </b>
+                                        <li id="L0_sensors"><b>sensors: </b></li>
+                                        <li id="L0_weapons"><b>Weapons: </b>
                                             <ul>
                                                 <li></b><div class="see-more"><span class="system">Armor Piercing Axe</span><span class="decrip">Action: Make three Melee Attack Tests with Disadvantage. Each successful test deals 1 damage. This damage can not be reduced.</span></div></li>
                                                 <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
                                                 <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
                                             </ul>
                                         </li>
-                                        <li><b>Defense: </b>
+                                        <li id="L0_defense"><b>Defense: </b>
                                             <ul>
                                                 <li><div class="see-more"><span class="system">Armored Plating</span><span class="decrip">Passive: Any melee attack against you deals 1 less damage. (minimum 1)</span></div></li>
                                             </ul>
                                         </li>
-                                        <li><b>Movement: </b>
+                                        <li id="L0_movement"><b>Movement: </b>
                                             <ul>
-                                                <li><div class="see-more"><span class="system">Transforming<span Style="color: #900;">*</span></span><span class="decrip">Work In Progress</span></div></li>
+                                                <li><div class="see-more">
+                                                    <span class="system">Transforming</span>
+                                                    <span class="decrip">Action: spend one fule to change the the loadout of this zoid if a mobile maintenace facility is available.
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)" onclick="myJsFunc(0);">Standard</a></li>
+                                                            <li><a href="javascript:void(0)" onclick="myJsFunc(1);">Panzer</a></li>
+                                                            <li><a href="javascript:void(0)" onclick="myJsFunc(2);">Jager</a></li>
+                                                            <li><a href="javascript:void(0)" onclick="myJsFunc(3);">Schneider</a></li>
+                                                        </ul>
+                                                    </span>
+                                                </div></li>
                                                 <li><div class="see-more"><span class="system">Emergency Power</span><span class="decrip">Passive: When you would be reduced to 0 Structure, spend 3 Fuel. You instead are reduced to 3 Structure (effectively repairing 3).</span></div></li>
                                                 <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
                                                 <li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li>
                                             </ul>
-                                        </Span></li>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -639,11 +719,11 @@
                                         <li><b>Weapons: </b>
                                             <ul>
                                                 <li><div class="see-more"><span class="system">Automatic Cannon</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
-                                                <li><div class="see-more"><span class="system">syetem</span><span class="decrip">Description</span></div></li>
+                                                <li><div class="see-more"><span class="system">EMP Mines</span><span class="decrip">Action: Make a ranged or melee attack Test against a target with electronics. If you succeed, choose one system, and your target can not use it until your next turn.</span></div></li>
                                                 <li><div class="see-more"><span class="system">Rapid Fire Lasers</span><span class="decrip">Action: Perform up to three ranged Attack actions with Disadvantage. For each one that hits, you may make an extra ranged Attack action with Disadvantage (with the same benefit).</span></div></li>
                                                 <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
                                             </ul>
-                                        EMP Mines</li>
+                                        </li>
                                         <li><b>Defense: </b>
                                             <ul>
                                                 <li><div class="see-more"><span class="system">Cloaking</span><span class="decrip">Passive: When you Hide during combat, you Test with Advantage.</span></div></li>
@@ -659,7 +739,7 @@
                                 <div>
                                     <h3>Ultrasaurus</h3>
                                     <ul>
-                                        <li><b>Strcture: </b>12</li>
+                                        <li><b>Strcture: </b>12(16)</li>
                                         <li><b>Fuel: </b>10</li>
                                         <li><b>Passive: </b>
                                             <ul>
@@ -692,7 +772,7 @@
                                 <div>
                                     <h3>Madthunder</h3>
                                     <ul>
-                                        <li><b>Strcture: </b>12</li>
+                                        <li><b>Strcture: </b>12(16)</li>
                                         <li><b>Fuel: </b>10</li>
                                         <li><b>Passive: </b>
                                             <ul>
@@ -1105,9 +1185,9 @@
                                         </li>
                                         <li><b>Movement: </b>
                                             <ul>
-                                                <li><div class="see-more"><span class="system">Emergency Power</span><span class="decrip">Passive: When you would be reduced to 0 Structure, spend 3 Fuel. You instead are reduced to 3 Structure (effectively repairing 3).</span></div></li>
                                                 <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
                                                 <li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li>
+                                                <li><div class="see-more"><span class="system">High Speed Boosters</span><span class="decrip">Action: Spend 1 Fuel, and then move twice as a single Action.</span></div></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -1121,12 +1201,20 @@
                                         <li><b>sensors: </b></li>
                                         <li><b>Weapons: </b>
                                             <ul>
+                                                <li><div class="see-more"><span class="system">BGS</span><span class="decrip">Action: Make a melee attack Test that deals 3 damage.</span></div></li>
                                                 <li><div class="see-more"><span class="system">Charged Cannon</span><span class="decrip">Action: Spend 2 Fuel. If you take no other actions this turn, you may make a ranged attack Test with Disadvantage. If you succeed, deal 6 damage to your target. This system can not benefit from the Focus Action or be used in consecutive rounds.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Plasma Cannons</span><span class="decrip">Action: Make two ranged attack Tests, the second one being at Disadvantage. Each attack does 1 damage. If both attacks are successful, the Disadvantaged attack does 2 damage.</span></div></li>
+                                                <li><div class="see-more"><span class="system">Retractable Sword</span><span class="decrip">Action: Perform a melee Attack action. This attack deals 2 damage if it hits, and ignores anything that reduces damage (but the attack can still be Evaded).</span></div></li>
                                             </ul>
                                         </li>
-                                        <li><b>Defense: </b></li>
+                                        <li><b>Defense: </b>
+                                            <ul>
+                                                <li><div class="see-more"><span class="system">Mining Shield</span><span class="decrip">Passive: If you are attacked by a Test that makes multiple rolls, reduce the total damage taken after all rolls by 1. (Minimum 1)</span></div></li>
+                                            </ul>
+                                        </li>
                                         <li><b>Movement: </b>
                                             <ul>
+                                                <li><div class="see-more"><span class="system">Fuel Tanks</span><span class="decrip">Passive: Permanently increase your mecha’s Fuel by 4.</span></div></li>
                                                 <li><div class="see-more"><span class="system">Gravity Engines</span><span class="decrip">Action: Spend 2 Fuel, and then move. You may make a Melee attack with Disadvantage at the end of the move.</span></div></li>
                                                 <li><div class="see-more"><span class="system">Microfusion Reactor</span><span class="decrip">Action: Deal 2 damage to every enemy in the encounter and 1 damage to your Mecha and every friendly. Any non-reinforced buildings within 1 kilometer of your Mecha are leveled or catch fire. Using this action disables this system for the rest of the mission.</span></div></li>
                                             </ul>
@@ -1136,7 +1224,7 @@
                                 <div>
                                     <h3>Death Saurer</h3>
                                     <ul>
-                                        <li><b>Strcture: </b>12</li>
+                                        <li><b>Strcture: </b>12(16)</li>
                                         <li><b>Fuel: </b>10</li>
                                         <li><b>Passive: </b>
                                             <ul>
@@ -1169,7 +1257,7 @@
                                 <div>
                                     <h3>Death Stinger</h3>
                                     <ul>
-                                        <li><b>Strcture: </b>12</li>
+                                        <li><b>Strcture: </b>12(16)</li>
                                         <li><b>Fuel: </b>10</li>
                                         <li><b>Passive: </b>
                                             <ul>
